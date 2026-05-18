@@ -1,7 +1,9 @@
+import type {
+  PokeApiResourceListResponse,
+  Pokemon,
+  PokemonType,
+} from "../types";
 import { pokeApiClient } from "./pokeApiClient";
-import type { Pokemon } from "../types/pokemon";
-import type { PokeApiResourceListResponse } from "../types/pokeApiResourceListResponse";
-import type { PokemonType } from "../types/pokemonType";
 
 export const getPokemons = async (limit: number, offset: number) => {
   const { data } = await pokeApiClient.get<PokeApiResourceListResponse>(

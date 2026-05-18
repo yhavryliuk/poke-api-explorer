@@ -20,7 +20,7 @@ interface Props {
   onOpen: (id: number) => void;
 }
 
-const FALLBACK_IMAGE = "https://placehold.co/270x220?text=No+Image";
+const FALLBACK_IMAGE = "https://placehold.co/230x115?text=No+Image";
 
 export const PokemonCard = ({ pokemon, onOpen }: Props) => {
   const isFavorite = useFavoritesStore((state) => state.isFavorite(pokemon.id));
