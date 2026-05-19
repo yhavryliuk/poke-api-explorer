@@ -1,7 +1,7 @@
 import React from "react";
 import { CardContent, Stack } from "@mui/material";
 import { Favorite, FavoriteBorder } from "@mui/icons-material";
-import { useFavoritesStore } from "../../../store/favorites.store";
+import { useFavoritesStore } from "../../../store/favorites";
 import type { Pokemon } from "../../../types/pokemon";
 import { formatLabel } from "../../../utils";
 
