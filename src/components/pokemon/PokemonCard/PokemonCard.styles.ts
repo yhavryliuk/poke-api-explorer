@@ -20,10 +20,12 @@ export const PokemonId = styled(Typography)({
   fontWeight: 600,
 });
 
-export const TypeChip = styled(Chip)<{
+export const TypeChip = styled(Chip, {
+  shouldForwardProp: (prop) => prop !== "primarytype",
+})<{
   primarytype?: boolean;
 }>(({ theme, primarytype }) => ({
-  borderRadius: theme.spacing(2),
+  borderRadius: 8,
   fontWeight: 600,
   backgroundColor: primarytype
     ? theme.palette.text.primary
