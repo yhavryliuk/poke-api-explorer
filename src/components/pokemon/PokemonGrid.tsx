@@ -2,14 +2,14 @@ import { Grid } from "@mui/material";
 
 import { PokemonCard } from "./PokemonCard";
 import type { Pokemon } from "../../types/pokemon";
-import { usePokemonDetailsActions } from "../../hooks";
+import { pokemonSelectors, usePokemonStore } from "../../store/pokemon";
 
 interface Props {
   pokemons: Pokemon[];
 }
 
 export const PokemonGrid = ({ pokemons }: Props) => {
-  const { openDetails } = usePokemonDetailsActions();
+  const openDetails = usePokemonStore(pokemonSelectors.openDetails);
 
   return (
     <Grid container spacing={3} sx={{ mt: 2 }}>

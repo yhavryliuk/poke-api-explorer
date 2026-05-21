@@ -9,16 +9,17 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { usePokemonDetails, usePokemonDetailsActions } from "../../hooks";
+import { usePokemonDetails } from "../../hooks";
 import { formatLabel } from "../../utils";
 import { PokemonMetric } from "./PokemonMetric";
+import { pokemonSelectors, usePokemonStore } from "../../store/pokemon";
 
 const DEFAULT_IMAGE = "https://placehold.co/475x475?text=No+Image";
 
 const PokemonDrawer = () => {
   const { isDrawerOpen, selectedPokemon, detailsLoading, detailsError } =
     usePokemonDetails();
-  const { closeDetails } = usePokemonDetailsActions();
+  const closeDetails = usePokemonStore(pokemonSelectors.closeDetails);
 
   const [imageLoaded, setImageLoaded] = useState(false);
 
