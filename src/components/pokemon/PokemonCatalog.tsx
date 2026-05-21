@@ -17,9 +17,7 @@ export const PokemonCatalog = () => {
     usePokemonList();
 
   const { page, fetchNext, fetchPrev } = usePokemonPagination();
-
   const { search, setSearch, searchPokemon, reset } = usePokemonSearch();
-
   const { types, selectedType, setSelectedType } = usePokemonFilters();
 
   useEffect(() => {

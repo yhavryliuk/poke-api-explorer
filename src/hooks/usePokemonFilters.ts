@@ -6,7 +6,7 @@ export const usePokemonFilters = () => {
 
   const selectedType = usePokemonStore(pokemonSelectors.selectedType);
 
-  const setSelectedType = usePokemonStore(pokemonSelectors.setSelectedType);
+  const { setSelectedType } = usePokemonStore(pokemonSelectors.actions);
 
   return {
     types,

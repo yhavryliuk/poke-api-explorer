@@ -4,11 +4,9 @@ import { pokemonSelectors } from "../store/pokemon";
 export const usePokemonSearch = () => {
   const search = usePokemonStore(pokemonSelectors.search);
 
-  const setSearch = usePokemonStore(pokemonSelectors.setSearch);
-
-  const searchPokemon = usePokemonStore(pokemonSelectors.searchPokemon);
-
-  const reset = usePokemonStore(pokemonSelectors.reset);
+  const { setSearch, searchPokemon, reset } = usePokemonStore(
+    pokemonSelectors.actions,
+  );
 
   return {
     search,

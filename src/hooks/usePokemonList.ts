@@ -8,9 +8,9 @@ export const usePokemonList = () => {
 
   const error = usePokemonStore(pokemonSelectors.error);
 
-  const fetchPokemons = usePokemonStore(pokemonSelectors.fetchPokemons);
-
-  const fetchTypes = usePokemonStore(pokemonSelectors.fetchTypes);
+  const { fetchPokemons, fetchTypes } = usePokemonStore(
+    pokemonSelectors.actions,
+  );
 
   const total = usePokemonStore(pokemonSelectors.total);
 

@@ -19,7 +19,7 @@ const DEFAULT_IMAGE = "https://placehold.co/475x475?text=No+Image";
 const PokemonDrawer = () => {
   const { isDrawerOpen, selectedPokemon, detailsLoading, detailsError } =
     usePokemonDetails();
-  const closeDetails = usePokemonStore(pokemonSelectors.closeDetails);
+  const { closeDetails } = usePokemonStore(pokemonSelectors.actions);
 
   const [imageLoaded, setImageLoaded] = useState(false);
 

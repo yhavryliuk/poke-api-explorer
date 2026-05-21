@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const PokemonGrid = ({ pokemons }: Props) => {
-  const openDetails = usePokemonStore(pokemonSelectors.openDetails);
+  const { openDetails } = usePokemonStore(pokemonSelectors.actions);
 
   return (
     <Grid container spacing={3} sx={{ mt: 2 }}>
